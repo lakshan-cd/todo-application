@@ -1,0 +1,100 @@
+{"datetime":"2025-10-26 00:16:08.885","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Starting TodoApplicationBackendApplication using Java 17.0.12 with PID 25272 (D:\me\coverage-x\to-do-application\todo-application-backend\target\classes started by LakshanDayathilake in D:\me\coverage-x\to-do-application\todo-application-backend),"v":0}
+{"datetime":"2025-10-26 00:16:08.885","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":No active profile set, falling back to 1 default profile: "default","v":0}
+{"datetime":"2025-10-26 00:16:09.078","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Bootstrapping Spring Data JPA repositories in DEFAULT mode.,"v":0}
+{"datetime":"2025-10-26 00:16:09.100","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Finished Spring Data repository scanning in 19 ms. Found 2 JPA repository interfaces.,"v":0}
+{"datetime":"2025-10-26 00:16:09.167","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Tomcat initialized with port 8081 (http),"v":0}
+{"datetime":"2025-10-26 00:16:09.167","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Initializing ProtocolHandler ["http-nio-8081"],"v":0}
+{"datetime":"2025-10-26 00:16:09.167","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Starting service [Tomcat],"v":0}
+{"datetime":"2025-10-26 00:16:09.167","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Starting Servlet engine: [Apache Tomcat/10.1.48],"v":0}
+{"datetime":"2025-10-26 00:16:09.181","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Initializing Spring embedded WebApplicationContext,"v":0}
+{"datetime":"2025-10-26 00:16:09.181","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Root WebApplicationContext: initialization completed in 295 ms,"v":0}
+{"datetime":"2025-10-26 00:16:09.217","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HHH000204: Processing PersistenceUnitInfo [name: default],"v":0}
+{"datetime":"2025-10-26 00:16:09.222","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HHH000026: Second-level cache disabled,"v":0}
+{"datetime":"2025-10-26 00:16:09.224","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Envers integration enabled? : true,"v":0}
+{"datetime":"2025-10-26 00:16:09.229","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":No LoadTimeWeaver setup: ignoring JPA class transformer,"v":0}
+{"datetime":"2025-10-26 00:16:09.229","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HikariPool-2 - Starting...,"v":0}
+{"datetime":"2025-10-26 00:16:09.239","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34b398d8,"v":0}
+{"datetime":"2025-10-26 00:16:09.240","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HikariPool-2 - Start completed.,"v":0}
+{"datetime":"2025-10-26 00:16:09.241","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"WARN ","message":HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default),"v":0}
+{"datetime":"2025-10-26 00:16:09.241","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"WARN ","message":HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead,"v":0}
+{"datetime":"2025-10-26 00:16:09.241","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown,"v":0}
+{"datetime":"2025-10-26 00:16:09.272","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration),"v":0}
+{"datetime":"2025-10-26 00:16:09.286","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Initialized JPA EntityManagerFactory for persistence unit 'default',"v":0}
+{"datetime":"2025-10-26 00:16:09.331","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"WARN ","message":spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning,"v":0}
+{"datetime":"2025-10-26 00:16:09.447","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":LiveReload server is running on port 35729,"v":0}
+{"datetime":"2025-10-26 00:16:09.449","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Exposing 3 endpoints beneath base path '/actuator',"v":0}
+{"datetime":"2025-10-26 00:16:09.461","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Starting ProtocolHandler ["http-nio-8081"],"v":0}
+{"datetime":"2025-10-26 00:16:09.464","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Tomcat started on port 8081 (http) with context path '/',"v":0}
+{"datetime":"2025-10-26 00:16:09.470","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Started TodoApplicationBackendApplication in 0.605 seconds (process running for 68.175),"v":0}
+{"datetime":"2025-10-26 00:16:09.472","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Condition evaluation unchanged,"v":0}
+{"datetime":"2025-10-26 00:16:21.396","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Initializing Spring DispatcherServlet 'dispatcherServlet',"v":0}
+{"datetime":"2025-10-26 00:16:21.396","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Initializing Servlet 'dispatcherServlet',"v":0}
+{"datetime":"2025-10-26 00:16:21.397","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Completed initialization in 1 ms,"v":0}
+{"datetime":"2025-10-26 00:16:21.427","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"ERROR","message":CorrelationIdnull, Field -- title : Message --Task Title should have 3 or more characters and cannot exceed 100 characters.,"v":0}
+{"datetime":"2025-10-26 00:16:21.440","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"WARN ","message":Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.lakshancd.todo_application_backend.payload.response.support.ResponseHolder<com.lakshancd.todo_application_backend.dto.task.TaskResponseDTO>> com.lakshancd.todo_application_backend.contoller.task.TaskController.createAccount(com.lakshancd.todo_application_backend.dto.task.CreateUpdateTaskDTO): [Field error in object 'createUpdateTaskDTO' on field 'title': rejected value [V2]; codes [SizeMinMax.createUpdateTaskDTO.title,SizeMinMax.title,SizeMinMax.java.lang.String,SizeMinMax]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [createUpdateTaskDTO.title,title]; arguments []; default message [title],Task,Title,100,3]; default message [Task Title should have 3 or more characters and cannot exceed 100 characters.]] ],"v":0}
+{"datetime":"2025-10-26 00:17:18.206","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"ERROR","message":CorrelationIdnull, BusinessFieldValidationException Task field Status is invalid.,"v":0}
+{"datetime":"2025-10-26 00:17:18.209","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"WARN ","message":Resolved [BaseRuntimeException(errorDetails=ErrorDetails(exceptionCode=PATCH_VALIDATION, errorMessage=Task field Status is invalid.), data=null)],"v":0}
+{"datetime":"2025-10-26 00:18:25.817","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Commencing graceful shutdown. Waiting for active requests to complete,"v":0}
+{"datetime":"2025-10-26 00:18:25.917","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Graceful shutdown complete,"v":0}
+{"datetime":"2025-10-26 00:18:25.922","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Closing JPA EntityManagerFactory for persistence unit 'default',"v":0}
+{"datetime":"2025-10-26 00:18:25.923","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HikariPool-2 - Shutdown initiated...,"v":0}
+{"datetime":"2025-10-26 00:18:25.937","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HikariPool-2 - Shutdown completed.,"v":0}
+{"datetime":"2025-10-26 00:18:30.853","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HV000001: Hibernate Validator 8.0.3.Final,"v":0}
+{"datetime":"2025-10-26 00:18:30.894","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Starting TodoApplicationBackendApplication using Java 17.0.12 with PID 23304 (D:\me\coverage-x\to-do-application\todo-application-backend\target\classes started by LakshanDayathilake in D:\me\coverage-x\to-do-application\todo-application-backend),"v":0}
+{"datetime":"2025-10-26 00:18:30.895","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":No active profile set, falling back to 1 default profile: "default","v":0}
+{"datetime":"2025-10-26 00:18:30.936","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable,"v":0}
+{"datetime":"2025-10-26 00:18:30.936","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG',"v":0}
+{"datetime":"2025-10-26 00:18:31.739","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Bootstrapping Spring Data JPA repositories in DEFAULT mode.,"v":0}
+{"datetime":"2025-10-26 00:18:31.790","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Finished Spring Data repository scanning in 44 ms. Found 2 JPA repository interfaces.,"v":0}
+{"datetime":"2025-10-26 00:18:32.198","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Tomcat initialized with port 8081 (http),"v":0}
+{"datetime":"2025-10-26 00:18:32.204","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Initializing ProtocolHandler ["http-nio-8081"],"v":0}
+{"datetime":"2025-10-26 00:18:32.205","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Starting service [Tomcat],"v":0}
+{"datetime":"2025-10-26 00:18:32.205","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Starting Servlet engine: [Apache Tomcat/10.1.48],"v":0}
+{"datetime":"2025-10-26 00:18:32.237","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Initializing Spring embedded WebApplicationContext,"v":0}
+{"datetime":"2025-10-26 00:18:32.237","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Root WebApplicationContext: initialization completed in 1301 ms,"v":0}
+{"datetime":"2025-10-26 00:18:32.386","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HHH000204: Processing PersistenceUnitInfo [name: default],"v":0}
+{"datetime":"2025-10-26 00:18:32.417","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HHH000412: Hibernate ORM core version 6.6.33.Final,"v":0}
+{"datetime":"2025-10-26 00:18:32.438","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HHH000026: Second-level cache disabled,"v":0}
+{"datetime":"2025-10-26 00:18:32.485","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Envers integration enabled? : true,"v":0}
+{"datetime":"2025-10-26 00:18:32.606","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":No LoadTimeWeaver setup: ignoring JPA class transformer,"v":0}
+{"datetime":"2025-10-26 00:18:32.623","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HikariPool-1 - Starting...,"v":0}
+{"datetime":"2025-10-26 00:18:32.723","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6b11dac2,"v":0}
+{"datetime":"2025-10-26 00:18:32.725","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HikariPool-1 - Start completed.,"v":0}
+{"datetime":"2025-10-26 00:18:32.754","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"WARN ","message":HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default),"v":0}
+{"datetime":"2025-10-26 00:18:32.756","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"WARN ","message":HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead,"v":0}
+{"datetime":"2025-10-26 00:18:32.769","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown,"v":0}
+{"datetime":"2025-10-26 00:18:33.370","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration),"v":0}
+{"datetime":"2025-10-26 00:18:33.423","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Initialized JPA EntityManagerFactory for persistence unit 'default',"v":0}
+{"datetime":"2025-10-26 00:18:33.648","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"WARN ","message":spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning,"v":0}
+{"datetime":"2025-10-26 00:18:34.080","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":LiveReload server is running on port 35729,"v":0}
+{"datetime":"2025-10-26 00:18:34.082","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Exposing 3 endpoints beneath base path '/actuator',"v":0}
+{"datetime":"2025-10-26 00:18:34.125","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Starting ProtocolHandler ["http-nio-8081"],"v":0}
+{"datetime":"2025-10-26 00:18:34.137","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Tomcat started on port 8081 (http) with context path '/',"v":0}
+{"datetime":"2025-10-26 00:18:34.148","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Started TodoApplicationBackendApplication in 3.567 seconds (process running for 4.161),"v":0}
+{"datetime":"2025-10-26 00:18:34.306","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Initializing Spring DispatcherServlet 'dispatcherServlet',"v":0}
+{"datetime":"2025-10-26 00:18:34.306","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Initializing Servlet 'dispatcherServlet',"v":0}
+{"datetime":"2025-10-26 00:18:34.309","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Completed initialization in 2 ms,"v":0}
+{"datetime":"2025-10-26 00:59:23.772","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Restarting due to 94 class path changes (0 additions, 94 deletions, 0 modifications),"v":0}
+{"datetime":"2025-10-26 00:59:24.365","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Commencing graceful shutdown. Waiting for active requests to complete,"v":0}
+{"datetime":"2025-10-26 00:59:24.967","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Pausing ProtocolHandler ["http-nio-8081"],"v":0}
+{"datetime":"2025-10-26 00:59:32.226","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Graceful shutdown complete,"v":0}
+{"datetime":"2025-10-26 00:59:32.283","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Stopping ProtocolHandler ["http-nio-8081"],"v":0}
+{"datetime":"2025-10-26 00:59:34.067","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Closing JPA EntityManagerFactory for persistence unit 'default',"v":0}
+{"datetime":"2025-10-26 00:59:34.276","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HikariPool-1 - Shutdown initiated...,"v":0}
+{"datetime":"2025-10-26 00:59:34.317","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":HikariPool-1 - Shutdown completed.,"v":0}
+{"datetime":"2025-10-26 00:59:37.161","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":Starting TodoApplicationBackendApplication using Java 17.0.12 with PID 23304 (D:\me\coverage-x\to-do-application\todo-application-backend\target\classes started by LakshanDayathilake in D:\me\coverage-x\to-do-application\todo-application-backend),"v":0}
+{"datetime":"2025-10-26 00:59:37.163","name":"todo-application","hostname":"DESKTOP-USUA6E9","level":"INFO ","message":No active profile set, falling back to 1 default profile: "default","v":0}

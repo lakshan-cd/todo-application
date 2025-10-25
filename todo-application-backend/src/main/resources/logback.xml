@@ -1,0 +1,24 @@
+<configuration debug="false">
+    <springProperty scope="context" name="appName" source="app.name"/>
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./logs/app/todolog.log</file>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>info</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./logs/app/acctlog_%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>9GB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>{"datetime":"%d{yyyy-MM-dd HH:mm:ss.SSS}","name":"${appName}","hostname":"${HOSTNAME}","level":"%-5level","message":%msg,"v":0}%n</pattern>
+
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
