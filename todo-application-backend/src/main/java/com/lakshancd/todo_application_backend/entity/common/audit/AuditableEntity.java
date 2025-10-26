@@ -14,15 +14,15 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.Date;
 
-@MappedSuperclass //just use with another entity
+@MappedSuperclass
 @Getter
 @Setter
 @NoArgsConstructor
-@EntityListeners(AuditingEntityListener.class)//capture auditing events
+@EntityListeners(AuditingEntityListener.class)
 @Audited
 public class AuditableEntity extends BaseEntity {
 
-    @Temporal(TemporalType.TIMESTAMP)//get current system time
+    @Temporal(TemporalType.TIMESTAMP)
     @CreatedDate
     @Column(name = "created_date")
     private Date createdDate;
