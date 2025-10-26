@@ -1,4 +1,4 @@
-package com.lakshancd.todo_application_backend.dto.task;
+package com.lakshancd.todo_application_backend.payload.task;
 
 import com.lakshancd.todo_application_backend.common.constants.ResponseConstants;
 import com.lakshancd.todo_application_backend.common.validators.notnullwithmessage.NotNullWithMessage;

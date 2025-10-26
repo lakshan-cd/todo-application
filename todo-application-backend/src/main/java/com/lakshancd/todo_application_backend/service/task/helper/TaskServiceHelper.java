@@ -2,8 +2,8 @@ package com.lakshancd.todo_application_backend.service.task.helper;
 
 import com.lakshancd.todo_application_backend.common.common_utils.CommonUtils;
 import com.lakshancd.todo_application_backend.common.constants.ResponseConstants;
-import com.lakshancd.todo_application_backend.dto.task.CreateUpdateTaskDTO;
-import com.lakshancd.todo_application_backend.dto.task.TaskResponseDTO;
+import com.lakshancd.todo_application_backend.payload.task.CreateUpdateTaskDTO;
+import com.lakshancd.todo_application_backend.payload.task.TaskResponseDTO;
 import com.lakshancd.todo_application_backend.entity.common.status.StatusDetailsEntity;
 import com.lakshancd.todo_application_backend.entity.task.TaskEntity;
 import com.lakshancd.todo_application_backend.enums.ExceptionCode;

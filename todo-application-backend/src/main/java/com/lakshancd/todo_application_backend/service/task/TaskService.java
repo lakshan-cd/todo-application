@@ -1,7 +1,7 @@
 package com.lakshancd.todo_application_backend.service.task;
 
-import com.lakshancd.todo_application_backend.dto.task.CreateUpdateTaskDTO;
-import com.lakshancd.todo_application_backend.dto.task.TaskResponseDTO;
+import com.lakshancd.todo_application_backend.payload.task.CreateUpdateTaskDTO;
+import com.lakshancd.todo_application_backend.payload.task.TaskResponseDTO;
 import com.lakshancd.todo_application_backend.payload.response.pagination.PaginatedResponse;
 
 import java.util.Map;

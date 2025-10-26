@@ -3,8 +3,8 @@ package com.lakshancd.todo_application_backend.contoller.task;
 import com.lakshancd.todo_application_backend.common.constants.ApiVersion;
 import com.lakshancd.todo_application_backend.common.constants.Paths;
 import com.lakshancd.todo_application_backend.common.constants.ResponseConstants;
-import com.lakshancd.todo_application_backend.dto.task.CreateUpdateTaskDTO;
-import com.lakshancd.todo_application_backend.dto.task.TaskResponseDTO;
+import com.lakshancd.todo_application_backend.payload.task.CreateUpdateTaskDTO;
+import com.lakshancd.todo_application_backend.payload.task.TaskResponseDTO;
 import com.lakshancd.todo_application_backend.payload.response.pagination.PaginatedResponse;
 import com.lakshancd.todo_application_backend.payload.response.support.ResponseBuilder;
 import com.lakshancd.todo_application_backend.payload.response.support.ResponseHolder;
@@ -91,19 +91,19 @@ public class TaskController {
         return ResponseBuilder.builder(patched)
                 .status(HttpStatus.OK)
                 .code(ResponseConstants.CommonMessages.PATCHED[1])
-                .message(ResponseConstants.getUpdatedMessage(ResponseConstants.STATUS))
+                .message(ResponseConstants.getUpdatedMessage(ResponseConstants.TASK))
                 .build();
     }
 
     @Operation(summary = "Delete Task" , description = "API to delete a task")
-    @DeleteMapping(BasePath+"/{id}/delete")
+    @PatchMapping(BasePath+"/{id}/delete")
     public ResponseEntity<ResponseHolder<TaskResponseDTO>> deleteTask(@PathVariable Integer id , @RequestBody Map<String,Object> updates){
         TaskResponseDTO patched = taskService.deleteTask(id, updates);
 
         return ResponseBuilder.builder(patched)
                 .status(HttpStatus.OK)
                 .code(ResponseConstants.CommonMessages.DELETED[1])
-                .message(ResponseConstants.getDeleteMessage(ResponseConstants.STATUS))
+                .message(ResponseConstants.getDeleteMessage(ResponseConstants.TASK))
                 .build();
     }
 
