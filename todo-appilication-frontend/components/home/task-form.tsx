@@ -1,44 +1,55 @@
 
+import { setTotalResults } from '@/redux/slices/pagination-slice';
+import { dispatch, RootState, useSelector } from '@/redux/store';
+import { createTask } from '@/service/task.service';
+import { ErrorType } from '@/types/common';
 import { CreateTaskRequest } from '@/types/task-types';
+import { enqueueSnackbar } from 'notistack';
 import React, { useState } from 'react';
 
-interface TaskFormProps {
-  onSubmit: (taskData: CreateTaskRequest) => void;
-  isLoading: boolean;
-}
-
-const TaskForm: React.FC<TaskFormProps> = ({ onSubmit, isLoading }) => {
+const TaskForm = () => {
   const [formData, setFormData] = useState<CreateTaskRequest>({
     title: '',
     description: '',
   });
 
   const [errors, setErrors] = useState<{ title?: string; description?: string }>({});
+  const [isLoading, setIsLoading] = useState(false);
+  const totalResults = useSelector((state: RootState) => state.pagination.totalResults);
 
   const validateForm = (): boolean => {
     const newErrors: { title?: string; description?: string } = {};
 
     if (!formData.title.trim()) {
       newErrors.title = 'Title is required';
-    } else if (formData.title.length > 255) {
-      newErrors.title = 'Title must not exceed 255 characters';
+    } else if (formData.title.length > 100) {
+      newErrors.title = 'Title must not exceed 100 characters';
     }
 
-    if (formData.description && formData.description.length > 1000) {
-      newErrors.description = 'Description must not exceed 1000 characters';
+    if (formData.description && formData.description.length > 255) {
+      newErrors.description = 'Description must not exceed 255 characters';
     }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (validateForm()) {
-      onSubmit(formData);
-      setFormData({ title: '', description: '' });
-      setErrors({});
+      setIsLoading(true);
+      try {
+        const response = await createTask(formData);
+        dispatch(setTotalResults(totalResults + 1));
+        enqueueSnackbar(response.message, { variant: 'success' });
+        setFormData({ title: '', description: '' });
+        setErrors({});
+      } catch (error:ErrorType | any) {
+        enqueueSnackbar(error.message, { variant: 'error' });
+      } finally {
+        setIsLoading(false);
+      }
     }
   };
 
@@ -46,7 +57,6 @@ const TaskForm: React.FC<TaskFormProps> = ({ onSubmit, isLoading }) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Clear error when user starts typing
     if (errors[name as keyof typeof errors]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
