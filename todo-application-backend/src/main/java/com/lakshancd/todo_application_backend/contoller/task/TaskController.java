@@ -12,7 +12,6 @@ import com.lakshancd.todo_application_backend.service.task.TaskService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,10 +23,13 @@ import java.util.Map;
 @RestController
 @Tag(name = "Task", description = "Task management APIs")
 @Slf4j
-@RequiredArgsConstructor
 public class TaskController {
     private static final String BasePath = Paths.PROJECT_BASE_PATH + ApiVersion.API_VERSION + "/task";
     private final TaskService taskService;
+
+    public TaskController(TaskService taskService) {
+        this.taskService = taskService;
+    }
 
     @Operation(summary = "Create a Task" , description = "API to create a new task")
     @PostMapping(BasePath)
