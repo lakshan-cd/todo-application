@@ -1,35 +1,36 @@
 'use client';
 
-import { Task } from '@/types/task-types';
 import TaskCard from './task-card';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getAllTasks } from '@/service/task.service';
+import { enqueueSnackbar } from 'notistack';
+import { RootState, useSelector, dispatch } from '@/redux/store';
 
 interface TaskListProps {
-  tasks: Task[];
-  onCompleteTask: (taskId: number) => void;
-  onDeleteTask: (taskId: number) => void;
   isLoading: boolean;
 }
 
-const TaskList: React.FC<TaskListProps> = ({ tasks, onCompleteTask, onDeleteTask, isLoading }) => {
+const TaskList: React.FC<TaskListProps> = () => {
   const [deletingTaskId, setDeletingTaskId] = useState<number | null>(null);
-  const [completingTaskId, setCompletingTaskId] = useState<number | null>(null);
+  const tasks = useSelector((state: RootState) => state.task.tasks);
+  const currentPage = useSelector((state: RootState) => state.pagination.currentPage);
+  const totalResults = useSelector((state: RootState) => state.pagination.totalResults);
+  const pageSize = useSelector((state: RootState) => state.pagination.pageSize);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleComplete = async (taskId: number) => {
-    setCompletingTaskId(taskId);
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 500));
-    onCompleteTask(taskId);
-    setCompletingTaskId(null);
-  };
-
-  const handleDelete = async (taskId: number) => {
-    setDeletingTaskId(taskId);
-    // Simulate API call delay
-    await new Promise(resolve => setTimeout(resolve, 300));
-    onDeleteTask(taskId);
-    setDeletingTaskId(null);
-  };
+  useEffect(() => {
+    const fetchTasks = async () => {
+      try{
+        setIsLoading(true);
+        await getAllTasks([`page=${currentPage}`, `pageSize=${pageSize}`, `sortDirection=${'desc'}`, `statusId=${10}`, `isActive=${true}`]);
+        setIsLoading(false);
+      } catch (error: any) {
+        enqueueSnackbar(error.response.data.error, { variant: 'error' });
+        setIsLoading(false);
+      }
+    };
+    fetchTasks();
+  }, []);
 
   if (isLoading) {
     return (
@@ -48,7 +49,7 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onCompleteTask, onDeleteTask
     );
   }
 
-  if (tasks.length === 0) {
+  if (!isLoading && tasks.length === 0 && totalResults === 0) {
     return (
       <div className="card text-center py-12">
         <div className="w-16 h-16 bg-gradient-to-r from-[#25CCF7] to-[#1B9CFC] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -61,36 +62,29 @@ const TaskList: React.FC<TaskListProps> = ({ tasks, onCompleteTask, onDeleteTask
       </div>
     );
   }
-
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200">Your Tasks</h2>
         <span className="text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-slate-700 px-3 py-1 rounded-full">
-          {tasks.length} task{tasks.length !== 1 ? 's' : ''}
+          {totalResults} task{totalResults !== 1 ? 's' : ''}
         </span>
       </div>
       
       <div className="space-y-4">
         {tasks.map((task) => (
           <div
-            key={task.id}
+            key={task.uid}
             className={`transition-all duration-300 ${
-              deletingTaskId === task.id 
+              deletingTaskId === task.uid 
                 ? 'animate-slide-out opacity-0' 
                 : 'animate-fade-in'
             }`}
           >
-            <TaskCard
-              task={task}
-              onComplete={() => handleComplete(task.id)}
-              onDelete={() => handleDelete(task.id)}
-              isCompleting={completingTaskId === task.id}
-              isDeleting={deletingTaskId === task.id}
-            />
+            <TaskCard task={task} setDeletingTaskId={setDeletingTaskId} />
           </div>
         ))}
-      </div>
+      </div>  
     </div>
   );
 };
