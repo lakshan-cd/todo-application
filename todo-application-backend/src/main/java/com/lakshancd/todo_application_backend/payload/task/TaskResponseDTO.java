@@ -11,7 +11,7 @@ public class TaskResponseDTO {
     private String description;
     private Integer statusId;
     private String statusDescription;
-    private Integer isActive;
+    private Boolean isActive;
     private Date createdDate;
     private String createdBy;
     private Date modifiedDate;
