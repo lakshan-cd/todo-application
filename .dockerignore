@@ -1,0 +1,52 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Node modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Coverage and test results
+coverage
+.nyc_output
+test-results
+playwright-report
+
+# Build outputs
+.next
+.nuxt
+dist
+build
+out
+target
+*.jar
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Misc
+*.md
+README.md
+LICENSE
+.dockerignore
+Dockerfile
+docker-compose.yml
