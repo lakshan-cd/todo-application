@@ -16,9 +16,7 @@ export default function HomePage() {
           
           {/* Right side - Task List */}
           <div className="animate-slide-in" style={{ animationDelay: '0.1s' }}>
-            <TaskList
-              isLoading={false}
-            />
+            <TaskList />
           </div>
         </div>
       </div>

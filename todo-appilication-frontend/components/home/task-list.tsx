@@ -6,11 +6,7 @@ import { getAllTasks } from '@/service/task.service';
 import { enqueueSnackbar } from 'notistack';
 import { RootState, useSelector, dispatch } from '@/redux/store';
 
-interface TaskListProps {
-  isLoading: boolean;
-}
-
-const TaskList: React.FC<TaskListProps> = () => {
+const TaskList: React.FC = () => {
   const [deletingTaskId, setDeletingTaskId] = useState<number | null>(null);
   const tasks = useSelector((state: RootState) => state.task.tasks);
   const currentPage = useSelector((state: RootState) => state.pagination.currentPage);
