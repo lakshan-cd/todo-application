@@ -49,7 +49,7 @@ const TaskList: React.FC<TaskListProps> = () => {
     );
   }
 
-  if (!isLoading && tasks.length === 0 && totalResults === 0) {
+  if (!isLoading && tasks?.length === 0 && totalResults === 0) {
     return (
       <div className="card text-center py-12">
         <div className="w-16 h-16 bg-gradient-to-r from-[#25CCF7] to-[#1B9CFC] rounded-full flex items-center justify-center mx-auto mb-4">
@@ -72,7 +72,7 @@ const TaskList: React.FC<TaskListProps> = () => {
       </div>
       
       <div className="space-y-4">
-        {tasks.map((task) => (
+        {tasks?.map((task) => (
           <div
             key={task.uid}
             className={`transition-all duration-300 ${

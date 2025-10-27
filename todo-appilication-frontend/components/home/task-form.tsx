@@ -22,6 +22,8 @@ const TaskForm = () => {
 
     if (!formData.title.trim()) {
       newErrors.title = 'Title is required';
+    } else if (formData.title.length < 3) {
+      newErrors.title = 'Title must be at least 3 characters';
     } else if (formData.title.length > 100) {
       newErrors.title = 'Title must not exceed 100 characters';
     }
