@@ -6,7 +6,7 @@
             <level>info</level>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>./logs/app/acctlog_%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>./logs/app/todolog_%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
             <totalSizeCap>9GB</totalSizeCap>
         </rollingPolicy>
