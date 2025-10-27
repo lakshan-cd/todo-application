@@ -206,15 +206,6 @@ docker-compose logs -f todo-app
 # Modify logging.level in application-docker.properties
 ```
 
-## Production Considerations
-
-For production deployment, consider:
-
-1. **Security**: Change default passwords
-2. **SSL**: Enable SSL for database connections
-3. **Backup**: Set up automated database backups
-4. **Monitoring**: Add monitoring and alerting
-5. **Scaling**: Use Docker Swarm or Kubernetes for scaling
 
 ## Clean Up
 
