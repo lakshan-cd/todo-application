@@ -12,7 +12,6 @@ export default function MainLayout({
 }>) {
     return (
         <>
-        <Providers>
             <SnackbarProvider>
             <Provider store={store} >
                 <HeaderComponent/>
@@ -21,7 +20,6 @@ export default function MainLayout({
                 </div>
             </Provider>
             </SnackbarProvider>
-        </Providers>
         </>
     );
 }

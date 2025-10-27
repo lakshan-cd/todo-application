@@ -350,7 +350,6 @@ to-do-application/
 - ✅ Create, complete, and delete tasks
 - ✅ Pagination (shows only latest 5 tasks)
 - ✅ Form validation
-- ✅ Dark/Light theme toggle
 - ✅ Responsive design
 - ✅ Real-time task updates
 - ✅ Comprehensive test coverage

@@ -23,7 +23,7 @@ const HeaderComponent = () => {
                 {/* Right side controls */}
                 <div className="flex items-center space-x-6 flex-shrink-0">
                     {/* Theme Toggle */}
-                    <ThemeSwitcher />
+                    {/* <ThemeSwitcher /> */}
 
                     {/* User Profile */}
                     <div className="relative">
